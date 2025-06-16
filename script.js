@@ -5,3 +5,7 @@ document.getElementById('capa').onclick = function() {
   document.querySelector('.swiper').classList.add("active");
   this.classList.add("hidden");
 };
+
+document.getElementById('go-gifts').onclick = function() {
+  document.querySelector('.swiper').classList.add("active");
+};
