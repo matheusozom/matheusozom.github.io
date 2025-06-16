@@ -12,3 +12,7 @@ document.getElementById('capa').onclick = async function() {
   document.querySelector('.swiper').classList.add("active");
   this.classList.add("hidden");
 };
+
+document.getElementById('go-gifts').onclick = function() {
+  if (window._swiper) window._swiper.slideNext();
+};
