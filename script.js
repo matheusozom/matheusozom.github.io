@@ -1,4 +1,4 @@
-// Ajusta a unidade vh para mobile
+// Ajusta a unidade vh para dispositivos móveis
 function setVH() {
   document.documentElement.style.setProperty(
     '--vh', window.innerHeight * 0.01 + 'px'
@@ -7,7 +7,7 @@ function setVH() {
 window.addEventListener('resize', setVH);
 setVH();
 
-// Gera os balões
+// Gera os balões para a animação
 function launchBalloons(n = 30) {
   const C = document.getElementById('balloons');
   for (let i = 0; i < n; i++) {
@@ -23,7 +23,7 @@ function launchBalloons(n = 30) {
   }
 }
 
-// Clique no envelope
+// Ao clicar no envelope, dispara a animação, solicita fullscreen e remove o envelope
 document.getElementById('capa').onclick = async function() {
   const audio = document.getElementById('bg-music');
   audio.currentTime = 0;
@@ -37,9 +37,9 @@ document.getElementById('capa').onclick = async function() {
     console.log("Bloqueio de orientação não suportado:", err);
   }
 
-  // Ativa o slider e esconde o envelope
+  // Ativa o slider e remove o envelope permanentemente
   document.querySelector('.swiper').classList.add('active');
-  this.classList.add('hidden');
+  this.remove();
 
   if (!window._swiper) {
     window._swiper = new Swiper('.swiper', {
