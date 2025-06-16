@@ -2,32 +2,31 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Convite Interativo</title>
-
-  <!-- 1. IMPORTA O CSS DO SWIPER -->
+  
+  <!-- Importa o CSS do Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
-  <!-- 2. SEU CSS -->
+  <!-- Seu CSS -->
   <link rel="stylesheet" href="style.css"/>
-
-  <!-- 3. JS do Swiper + seu JS -->
+  
+  <!-- JS do Swiper e seu JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-
+  
   <div id="balloons"></div>
+  
   <audio id="bg-music"
          src="https://cdn.pixabay.com/download/audio/2023/07/18/audio_f12da6e88f.mp3?filename=romantic-piano-123906.mp3"
          loop preload="auto"></audio>
-
-  <img id="capa"
-       src="https://i.ibb.co/ZpRxVt5n/Copilot-20250616-090014.png"
+  
+  <!-- Envelope centralizado -->
+  <img id="capa" src="https://i.ibb.co/ZpRxVt5n/Copilot-20250616-090014.png"
        alt="Envelope fechado – toque para abrir"/>
-
-  <!-- SLIDER (começa oculto) -->
+  
+  <!-- Slider (oculto até o clique) -->
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -48,10 +47,7 @@
       <div class="swiper-slide rsvp-slide">
         <h2>Confirme sua presença</h2>
         <div class="iframe-container">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdmDrisciQXYKm7U-cnGWIkF5oG5ngSTXQGgj6JAHfdWHOcUA/viewform?embedded=true"
-            scrolling="yes">
-          </iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmDrisciQXYKm7U-cnGWIkF5oG5ngSTXQGgj6JAHfdWHOcUA/viewform?embedded=true" scrolling="yes"></iframe>
         </div>
         <div id="go-gifts" class="btn-gifts">Seguir para Presentes</div>
       </div>
@@ -65,6 +61,6 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-
+  
 </body>
 </html>
